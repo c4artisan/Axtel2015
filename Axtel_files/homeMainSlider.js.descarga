@@ -1,0 +1,80 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+(function($) {
+  Drupal.behaviors.mainSlider = {
+    attach: function(context, settings) {
+      $('.main-slider .view-content').royalSlider({
+        arrowsNav: false,
+        controlsInside: false,
+        imageScaleMode: 'fill',
+        arrowsNavAutoHide: false,
+        autoScaleSlider: true,
+        autoScaleSliderWidth: 960,
+        autoScaleSliderHeight: 350,
+        controlNavigation: 'bullets',
+        thumbsFitInViewport: false,
+        navigateByClick: false,
+        startSlideId: 0,
+        sliderDrag: false,
+        sliderTouch: true,
+        transitionType: 'move',
+        autoPlay: {
+          enabled: true,
+          delay: 8000,
+        },
+        globalCaption: true,
+        deeplinking: {
+          enabled: true,
+          change: false,
+        },
+      });
+      $('.secondary-slider .view-content').royalSlider({
+        autoHeight: true,
+        sliderDrag: false,
+        sliderTouch: true,
+        controlNavigation: 'none'
+      });
+      var mainSlider = $(".main-slider .view-content").data('royalSlider');
+      var secondarySlider = $(".secondary-slider .view-content").data('royalSlider');
+      mainSlider.ev.on('rsAfterSlideChange', function(event) {
+        secondarySlider.goTo(mainSlider.currSlide.id)
+      });
+      secondarySlider.ev.on('rsAfterSlideChange', function(event) {
+        mainSlider.goTo(secondarySlider.currSlide.id)
+      });
+    }
+  };
+})(jQuery);
+
+
+}
+/*
+     FILE ARCHIVED ON 23:44:24 Jul 14, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 03:07:28 Aug 09, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.919
+  exclusion.robots: 0.06
+  exclusion.robots.policy: 0.044
+  esindex: 0.013
+  cdx.remote: 17.219
+  LoadShardBlock: 113.734 (3)
+  PetaboxLoader3.datanode: 97.355 (4)
+  load_resource: 1137.961
+  PetaboxLoader3.resolve: 999.568
+*/

@@ -1,0 +1,131 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+(function($) {
+  Drupal.behaviors.mainMenu = {
+    attach: function(context, settings) {
+      //Initialize menus
+      $("#main-menu").mmenu({
+        extensions: ["border-full"],
+        offCanvas: {
+          position: "right",
+          zposition: "front"
+        },
+        navbar: {
+          title: "Menu"
+        }
+      });
+      $('#second-menu').mmenu({
+        extensions: ["border-full"],
+        offCanvas: {
+          position: "right",
+          zposition: "front"
+        },
+        navbar: {
+          title: "Contrata"
+        }
+      });
+      $('#third-menu').mmenu({
+        extensions: ["border-full"],
+        offCanvas: {
+          position: "right",
+          zposition: "front"
+        },
+        navbar: {
+          title: "Clientes"
+        }
+      });
+      //Set api's from menus
+      var apiMain = $("#main-menu").data("mmenu");
+      var apiSecond = $("#second-menu").data("mmenu");
+      var apiThird = $("#third-menu").data("mmenu");
+
+      function startMenu(id, button, api) {
+        if ($(id).hasClass('mm-opened')) {
+          api.close();
+          $(button).removeClass('active');
+        } else {
+          $(this).queue(function(next) {
+            closeAll();
+            next();
+          }).queue(function(next) {
+            if ($('#mm-blocker').css('display') == 'none') {
+              api.open();
+              $(button).addClass('active');
+            } else {
+              setTimeout(function() {
+                api.open();
+                $(button).addClass('active');
+              }, 600)
+            }
+            next();
+          }).dequeue();
+        }
+      }
+
+      function closeAll() {
+        apiMain.close();
+        $('#nav-icon-main-menu').removeClass('active');
+        apiSecond.close();
+        $('#nav-icon-second-menu').removeClass('active');
+        apiThird.close();
+        $('#nav-icon-third-menu').removeClass('active');
+      }
+
+      apiMain.bind("closed", function() {
+        apiMain.closeAllPanels();
+        $('#nav-icon-main-menu').removeClass('active');
+      });
+      apiSecond.bind("closed", function() {
+        apiSecond.closeAllPanels();
+        $('#nav-icon-second-menu').removeClass('active');
+      });
+      apiThird.bind("closed", function() {
+        apiThird.closeAllPanels();
+        $('#nav-icon-third-menu').removeClass('active');
+        restoreButtonMenus('#nav-icon-main-menu', '#nav-icon-second-menu', '#nav-icon-third-menu', '#logo_mobile');
+      });
+      $('#nav-icon-main-menu').on('click', function() {
+        startMenu('#main-menu', '#nav-icon-main-menu', apiMain);
+      });
+      $('#nav-icon-second-menu').on('click', function() {
+        startMenu('#second-menu', '#nav-icon-second-menu', apiSecond);
+      });
+      $('#nav-icon-third-menu').on('click', function() {
+        startMenu('#third-menu', '#nav-icon-third-menu', apiThird);
+      });
+    }
+  };
+})(jQuery);
+
+
+}
+/*
+     FILE ARCHIVED ON 23:44:44 Jul 14, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 03:09:01 Aug 09, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.844
+  exclusion.robots: 0.041
+  exclusion.robots.policy: 0.024
+  esindex: 0.016
+  cdx.remote: 8.825
+  LoadShardBlock: 137.087 (3)
+  PetaboxLoader3.resolve: 61.101 (2)
+  PetaboxLoader3.datanode: 114.18 (4)
+  load_resource: 42.895
+*/

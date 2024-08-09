@@ -1,0 +1,64 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+(function($) {
+  Drupal.behaviors.clickToActions = {
+    attach: function(context, settings) {
+      $('.click-to-chat').click(function() {
+        window.open('https://web.archive.org/web/20150714234424/http://www.axtel.mx/platica', 'popup', 'width=800,height=500,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0');
+        return false;
+      });
+      $('.click-to-callback').click(function() {
+        window.open('https://web.archive.org/web/20150714234424/http://axtel.mx/platica-ctcbRD/', 'popup', 'width=800,height=500,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0')
+        return false;
+      });
+      $(window).load(function() {
+        if ($(window).width() < 768) {
+          var phone = Drupal.settings.sellPhone.phone;
+          phone = phone.replace(/\s/g, '');
+          $('a.phone-call').removeAttr('target');
+          $('a.phone-call').attr('href', 'tel:' + phone);
+        } else {
+          $('a.phone-call').removeAttr('target');
+          $('a.phone-call').attr('href', '#');
+          $('a.click-to-chat').click(function() {
+            window.open('https://web.archive.org/web/20150714234424/http://www.axtel.mx/platica', 'popup', 'width=800,height=500,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0');
+            return false;
+          });
+        }
+      });
+    }
+  };
+})(jQuery);
+
+
+}
+/*
+     FILE ARCHIVED ON 23:44:24 Jul 14, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 03:09:23 Aug 09, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.456
+  exclusion.robots: 0.023
+  exclusion.robots.policy: 0.014
+  esindex: 0.008
+  cdx.remote: 8.081
+  LoadShardBlock: 117.748 (3)
+  PetaboxLoader3.datanode: 79.243 (4)
+  PetaboxLoader3.resolve: 71.331 (2)
+  load_resource: 48.267
+*/

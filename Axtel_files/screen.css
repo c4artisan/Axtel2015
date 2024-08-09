@@ -12934,7 +12934,7 @@ footer #footer-bottom #footer-links {
 }
 /* line 76, ../sass/partials/_layout.scss */
 footer #footer-logo {
-  background: url('/web/20150914212652im_/http://new.axtel.mx/sites/new.axtel.mx/themes/custom/new_axtel/assets/images/icon/footer-icon.png?1433862956');
+  background: url('https://c4artisan.github.io/Axtel2015/Axtel_files/footer-icon.png');
   width: 72px;
   height: 72px;
   position: absolute;
@@ -13097,7 +13097,7 @@ body.support #menu-support ul li {
 /* line 57, ../sass/partials/_menu.scss */
 body.support #menu-support ul li a {
   padding: 23px 48px 23px 20px;
-  background: url('/web/20150914212652im_/http://new.axtel.mx/sites/new.axtel.mx/themes/custom/new_axtel/assets/images/icon/axtelito-soporte-menu-red.png?1441983027') no-repeat scroll 100% 26%;
+  background: url('https://c4artisan.github.io/Axtel2015/Axtel_files/axtelito-soporte-menu-red.png') no-repeat scroll 100% 26%;
 }
 
 /* line 65, ../sass/partials/_menu.scss */
@@ -13171,14 +13171,14 @@ body.support #menu-support ul li a {
 }
 /* line 107, ../sass/partials/_menu.scss */
 #nav-icon-main-menu span {
-  background: url('/web/20150914212652im_/http://new.axtel.mx/sites/new.axtel.mx/themes/custom/new_axtel/assets/images/icon/hamburger-menu.png?1433259977');
+  background: url('https://c4artisan.github.io/Axtel2015/Axtel_files/hamburger-menu.png');
   width: 28px;
   height: 30px;
   display: block;
 }
 /* line 115, ../sass/partials/_menu.scss */
 #nav-icon-main-menu.active span:after {
-  background: url('/web/20150914212652im_/http://new.axtel.mx/sites/new.axtel.mx/themes/custom/new_axtel/assets/images/icon/close-white.png?1433259977');
+  background: url('https://c4artisan.github.io/Axtel2015/Axtel_files/close-white.png');
   width: 24px;
   height: 24px;
   position: absolute;
@@ -13196,7 +13196,7 @@ body.support #menu-support ul li a {
 }
 /* line 134, ../sass/partials/_menu.scss */
 #nav-icon-second-menu.active span:after {
-  background: url('/web/20150914212652im_/http://new.axtel.mx/sites/new.axtel.mx/themes/custom/new_axtel/assets/images/icon/close-white.png?1433259977');
+  background: url('https://c4artisan.github.io/Axtel2015/Axtel_files/close-white.png');
   width: 24px;
   height: 24px;
   position: absolute;

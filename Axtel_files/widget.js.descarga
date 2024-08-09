@@ -1,0 +1,24 @@
+(function(theWindow) {
+  var Swiftype = theWindow.Swiftype || (theWindow.Swiftype = {});
+  Swiftype.root_url = Swiftype.root_url || "//search-api.swiftype.com";
+  Swiftype.key = "zkwCX6p5z5sykuUD_xXw";
+  Swiftype.inputElement = "#st-search-input";
+  Swiftype.attachElement = "#st-search-input";
+  Swiftype.renderStyle = "overlay";
+  Swiftype.searchPerPage = 10;
+  Swiftype.autocompleteResultLimit = 10;
+
+  // Unset optional configuration that may have been set by the old embed or attempted customization
+  Swiftype.resultPageURL = undefined;
+  Swiftype.resultContainingElement = null;
+  Swiftype.disableAutocomplete = false;
+
+
+
+
+  var executeCommand = theWindow[theWindow["SwiftypeObject"]];
+
+  executeCommand("loadStyleSheet", "//s.swiftypecdn.com/assets/swiftype_nocode-841601ba635e8ac17871e4c70b068be7.css");
+  executeCommand("loadScript", "//s.swiftypecdn.com/assets/swiftype_nocode-887a1d7023fd5e7912102c902d625f68.js");
+
+})(window);

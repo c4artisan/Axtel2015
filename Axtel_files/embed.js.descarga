@@ -1,0 +1,102 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+var Swiftype = window.Swiftype || {};
+Swiftype.root_url = Swiftype.root_url || "//web.archive.org/web/20150819064132/http://search-api.swiftype.com";
+Swiftype.embedVersion = Swiftype.embedVersion || 'v1';
+if (typeof Swiftype.renderStyle === 'undefined') {
+  Swiftype.renderStyle = 'nocode';
+}
+
+Swiftype.isMobile = function() {
+  var ua = window.navigator.userAgent;
+  if(/iPhone|iPod/.test(ua) && ua.indexOf("AppleWebKit") > -1 ) {
+    return true;
+  }
+  if (/Android/.test(ua) && /Mobile/i.test(ua) && ua.indexOf("AppleWebKit") > -1 ) {
+    return true;
+  }
+  return false;
+};
+
+Swiftype.loadScript = function(url, callback) {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.async = true;
+  script.src = url;
+
+  var entry = document.getElementsByTagName('script')[0];
+  entry.parentNode.insertBefore(script, entry);
+
+  if (script.addEventListener) {
+    script.addEventListener('load', callback, false);
+  } else {
+    script.attachEvent('onreadystatechange', function() {
+      if (/complete|loaded/.test(script.readyState))
+        callback();
+    });
+  }
+};
+
+Swiftype.loadStylesheet = function(url) {
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = url;
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(link);
+};
+
+Swiftype.loadSupportingFiles = function(callback) {
+  if (Swiftype.renderStyle === false) {
+    Swiftype.loadScript("//web.archive.org/web/20150819064132/http://s.swiftypecdn.com/assets/swiftype_no_render-e796dc5f739c9b62b33316c1d7f278a6.js", callback);
+    Swiftype.loadStylesheet("//web.archive.org/web/20150819064132/http://s.swiftypecdn.com/assets/swiftype-372b0eab2251b5551acc7e940f39a528.css");
+  } else if (Swiftype.isMobile() && !Swiftype.disableMobileOverlay) {
+    Swiftype.loadScript("//web.archive.org/web/20150819064132/http://s.swiftypecdn.com/assets/swiftype_nocode-5190fccc6a3c7dcff96a2c6aad0e53dd.js", callback);
+    Swiftype.loadStylesheet("//web.archive.org/web/20150819064132/http://s.swiftypecdn.com/assets/swiftype_nocode-862cc0feac61f00e170fbcc6360aeeb7.css");
+  } else if (Swiftype.renderStyle === 'inline' || Swiftype.renderStyle === 'new_page') {
+    Swiftype.loadScript("//web.archive.org/web/20150819064132/http://s.swiftypecdn.com/assets/swiftype_onpage-95327cd9b94f54340b61bb07246d04ab.js", callback);
+    Swiftype.loadStylesheet("//web.archive.org/web/20150819064132/http://s.swiftypecdn.com/assets/swiftype-372b0eab2251b5551acc7e940f39a528.css");
+  } else {
+    Swiftype.loadScript("//web.archive.org/web/20150819064132/http://s.swiftypecdn.com/assets/swiftype_nocode-5190fccc6a3c7dcff96a2c6aad0e53dd.js", callback);
+    Swiftype.loadStylesheet("//web.archive.org/web/20150819064132/http://s.swiftypecdn.com/assets/swiftype_nocode-862cc0feac61f00e170fbcc6360aeeb7.css");
+  }
+};
+
+var Swiftype = (function(window, undefined) {
+   if (Swiftype.embedVersion === 'v1') {
+     Swiftype.loadSupportingFiles(function(){});
+   }
+   return Swiftype;
+})(window);
+
+
+}
+/*
+     FILE ARCHIVED ON 06:41:32 Aug 19, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 02:42:51 Aug 09, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.57
+  exclusion.robots: 0.028
+  exclusion.robots.policy: 0.017
+  esindex: 0.012
+  cdx.remote: 6.244
+  LoadShardBlock: 102.017 (3)
+  PetaboxLoader3.datanode: 77.086 (4)
+  load_resource: 204.094
+  PetaboxLoader3.resolve: 145.963
+*/

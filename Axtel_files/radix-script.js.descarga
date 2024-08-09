@@ -1,0 +1,95 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+/**
+ * @file
+ * JS for Radix.
+ */
+(function ($, Drupal, window, document, undefined) {
+
+  // Show dropdown on hover.
+  Drupal.behaviors.radix_dropdown = {
+    attach: function(context, setting) {
+      $('.dropdown').once('radix-dropdown', function(){
+        // Show dropdown on hover.
+        $(this).mouseenter(function(){
+          $(this).addClass('open');
+        });
+        $(this).mouseleave(function(){
+          $(this).removeClass('open');
+        });
+      });
+    }
+  }
+
+  // Bootstrap tooltip.
+  Drupal.behaviors.radix_tooltip = {
+    attach: function(context, setting) {
+      if ($.fn.tooltip) {
+        $("[data-toggle='tooltip']").tooltip();
+      }
+    }
+  }
+
+  // Bootstrap popover.
+  Drupal.behaviors.radix_popover = {
+    attach: function(context, setting) {
+      if ($.fn.popover) {
+        $("[data-toggle='popover']").popover();
+      }
+    }
+  }
+
+  $(document).ready(function() {
+    // Allow main menu dropdown-toggle to be clickable.
+    $('#main-menu .dropdown > a.dropdown-toggle').once('radix-dropdown', function(){
+      $(this).click(function(e) {
+        e.preventDefault();
+        window.location.href = $(this).attr('href');
+      });
+    });
+
+    // Show first tab by default.
+    // Ignore the "primary" tabs on the node edit page.
+    if ($.fn.tab) {
+      var tabs = $('.nav-tabs').not('.primary');
+      tabs.children('li').first().find('a').tab('show');
+
+      if (hash = window.location.hash) {
+        $('.nav-tabs > li > a[href$=' + hash + ']').tab('show');
+      }
+    }
+  });
+})(jQuery, Drupal, this, this.document);
+
+
+}
+/*
+     FILE ARCHIVED ON 17:53:04 Dec 16, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 02:42:45 Aug 09, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.42
+  exclusion.robots: 0.024
+  exclusion.robots.policy: 0.014
+  esindex: 0.008
+  cdx.remote: 5.745
+  LoadShardBlock: 204.226 (3)
+  PetaboxLoader3.resolve: 289.176 (3)
+  PetaboxLoader3.datanode: 55.268 (4)
+  load_resource: 183.556
+*/

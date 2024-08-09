@@ -13206,7 +13206,7 @@ body.support #menu-support ul li a {
 
 /* line 147, ../sass/partials/_menu.scss */
 #nav-icon-third-menu #clients-icon {
-  background: url('/web/20150914212652im_/http://new.axtel.mx/sites/new.axtel.mx/themes/custom/new_axtel/assets/images/icon/client.png?1433259977');
+  background: url('https://c4artisan.github.io/Axtel2015/Axtel_files/client.png');
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -13222,7 +13222,7 @@ body.support #menu-support ul li a {
 }
 /* line 160, ../sass/partials/_menu.scss */
 #nav-icon-third-menu.active span:after {
-  background: url('/web/20150914212652im_/http://new.axtel.mx/sites/new.axtel.mx/themes/custom/new_axtel/assets/images/icon/close-gray.png?1433259977');
+  background: url('https://c4artisan.github.io/Axtel2015/Axtel_files/close-gray.png');
   width: 24px;
   height: 24px;
   position: absolute;
